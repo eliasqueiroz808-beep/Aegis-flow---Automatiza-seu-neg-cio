@@ -1,0 +1,363 @@
+:root {
+    --bg-base: #030305;
+    --card-bg: #0a0a0e;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #10b981; /* Verde Tecnológico */
+    --accent-hover: #059669;
+    --urgency: #ef4444; /* Vermelho suave */
+    --urgency-bg: rgba(239, 68, 68, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(circle at top, rgba(16, 185, 129, 0.05), transparent 70%);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(255,255,255,0.05));
+}
+
+/* Card Central */
+.central-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+/* Timer / Urgência */
+.urgency-banner {
+    background: var(--urgency-bg);
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.urgency-text {
+    display: block;
+    color: #fca5a5;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.timer {
+    color: var(--urgency);
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 2px;
+}
+
+/* Conteúdo do Card */
+.card-content {
+    padding: 32px 24px;
+}
+
+.headline {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.subheadline {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Inclusos */
+.features-list {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.features-list h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.features-list ul {
+    list-style: none;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.features-list li:last-child {
+    margin-bottom: 0;
+}
+
+.icon-check {
+    width: 20px;
+    height: 20px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+/* Funil */
+.funnel-explanation {
+    text-align: center;
+    background: rgba(16, 185, 129, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 32px;
+    border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.funnel-explanation p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.arrow {
+    color: var(--accent);
+    font-weight: bold;
+    margin: 0 4px;
+}
+
+/* Ancoragem */
+.price-anchoring {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.old-price {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-decoration: line-through;
+    margin-right: 12px;
+    font-weight: 600;
+}
+
+.new-price {
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: 800;
+}
+
+.offer-note {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+/* Pagamento */
+.payment-condition {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    background: rgba(255,255,255,0.02);
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.payment-condition p {
+    margin-bottom: 8px;
+}
+
+.payment-condition p:last-child {
+    margin-bottom: 0;
+}
+
+.payment-condition strong {
+    color: var(--text-primary);
+}
+
+.payment-condition .highlight {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* CTA Botão */
+.cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--accent);
+    color: #000;
+    font-weight: 800;
+    font-size: 1.15rem;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+}
+
+.cta-btn:hover {
+    transform: scale(1.02);
+    background: #34d399;
+    box-shadow: 0 6px 25px rgba(16, 185, 129, 0.5);
+}
+
+.pulse-btn {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Bottom Info */
+.bottom-info {
+    width: 100%;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.problem-statement {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.1);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.problem-statement .title {
+    color: #fca5a5;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.problem-statement ul {
+    list-style: none;
+}
+
+.problem-statement li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.problem-statement li:before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: var(--urgency);
+    font-size: 0.8rem;
+    top: 2px;
+    font-weight: bold;
+}
+
+.positioning {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    background: rgba(255,255,255,0.02);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+}
+
+.positioning strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Ajustes */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 16px 40px;
+    }
+    .card-content {
+        padding: 24px 16px;
+    }
+    .headline {
+        font-size: 1.35rem;
+    }
+    .cta-btn {
+        font-size: 1.05rem;
+        padding: 18px;
+    }
+}

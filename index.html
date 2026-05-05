@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEGIS FLOW - Sistema de Aquisição</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container fade-in">
+        <!-- Logo -->
+        <header class="logo-header">
+            <div class="brand">
+                <img src="https://res.cloudinary.com/dsetxj6at/image/upload/v1777928360/Gemini_Generated_Image__42_iwkyno.png" alt="AEGIS FLOW Logo" class="logo">
+                <span class="brand-name">AEGIS FLOW</span>
+            </div>
+        </header>
+
+        <!-- Main Card -->
+        <main class="central-card">
+            <!-- Urgency Banner -->
+            <div class="urgency-banner">
+                <span class="urgency-text">Essa oferta de ativação pode sair do ar a qualquer momento</span>
+                <div class="timer" id="countdown">14:59</div>
+            </div>
+
+            <!-- Content -->
+            <div class="card-content">
+                <h1 class="headline">Sistema Completo de Aquisição e Conversão de Clientes para Negócios Locais</h1>
+                <p class="subheadline">Nós estruturamos toda a presença digital do seu negócio para atrair clientes no Google e Bing e converter automaticamente via WhatsApp.</p>
+
+                <div class="features-list">
+                    <h3>O que está incluso:</h3>
+                    <ul>
+                        <li>
+                            <svg class="icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Google Meu Negócio otimizado profissionalmente
+                        </li>
+                        <li>
+                            <svg class="icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Bing Places configurado e posicionado
+                        </li>
+                        <li>
+                            <svg class="icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Criação de até 4 anúncios estratégicos
+                        </li>
+                        <li>
+                            <svg class="icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Site ou loja online profissional (caso necessário)
+                        </li>
+                        <li>
+                            <svg class="icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Funil de vendas exclusivo para WhatsApp
+                        </li>
+                        <li>
+                            <svg class="icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Estrutura completa de aquisição e conversão
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="funnel-explanation">
+                    <p>O cliente encontra seu negócio no Google <span class="arrow">→</span> entra na estrutura <span class="arrow">→</span> é direcionado para o WhatsApp pronto para comprar</p>
+                </div>
+
+                <div class="price-anchoring">
+                    <span class="old-price">R$ 1.499</span>
+                    <span class="new-price">👉 R$ 500</span>
+                    <p class="offer-note">Oferta inicial para novos clientes selecionados</p>
+                </div>
+
+                <div class="payment-condition">
+                    <p><strong>Você só paga uma única vez para ativar seu sistema completo.</strong></p>
+                    <p>Caso você goste dos resultados e queira continuar escalando seu negócio com a AEGIS FLOW, poderá receber uma oferta opcional de continuidade com estratégias avançadas.</p>
+                    <p class="highlight">Sem mensalidade obrigatória. Sem compromisso recorrente.</p>
+                </div>
+
+                <a href="https://mpago.li/1gypwvG" target="_blank" class="btn cta-btn pulse-btn">Quero meu pacote agora</a>
+            </div>
+        </main>
+
+        <!-- Bottom Text: Problem & Positioning -->
+        <div class="bottom-info">
+            <div class="problem-statement">
+                <p class="title">Negócios locais perdem clientes todos os dias porque:</p>
+                <ul>
+                    <li>Não aparecem no Google</li>
+                    <li>Não têm presença no Bing</li>
+                    <li>Não possuem estrutura digital profissional</li>
+                    <li>Não convertem visitantes em vendas</li>
+                </ul>
+            </div>
+            <div class="positioning">
+                <strong>Isso não é marketing básico.</strong>
+                É um sistema completo de aquisição + posicionamento + conversão automatizada de clientes.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lógica do cronômetro de 15 minutos
+        let time = 15 * 60; // 15 minutos em segundos
+        const timerEl = document.getElementById('countdown');
+        
+        setInterval(() => {
+            if(time <= 0) time = 15 * 60; // Reinicia se acabar (loop opcional para urgência)
+            let m = Math.floor(time / 60);
+            let s = time % 60;
+            timerEl.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            time--;
+        }, 1000);
+    </script>
+</body>
+</html>
