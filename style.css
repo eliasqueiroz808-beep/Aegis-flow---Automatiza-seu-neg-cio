@@ -289,6 +289,16 @@ body {
     text-align: left;
 }
 
+.problem-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    display: block;
+}
+
 .problem-statement .title {
     color: #fca5a5;
     font-weight: 700;
